@@ -4,7 +4,7 @@ from datetime import datetime
 
 # Page Config
 st.set_page_config(
-  page_title ='Avinash Jairam | Portfolio',
+  page_title =' jesse | Portfolio',
   page_icon='🎯',
   layout = 'wide'
 )
@@ -31,11 +31,11 @@ if page == '🏠 Home':
   col1, col2, col3 = st.columns(3)
 
   with col1:
-      st.metric('GPA', '3.8', '📚')
+      st.metric('GPA', '3.2 ', '📚')
   with col2:
       st.metric('Projects', '5', '💻')
   with col3:
-      st.metric('Skills', '10+', '🚀')
+      st.metric('Skills', '7+', '🚀')
 
   st.write('---')
 
@@ -44,14 +44,13 @@ if page == '🏠 Home':
   with col1:
     st.subheader('Welcome to my digital space!👋')
     st.write('''
-                I am a Computer Information Systems student passionate about web development and emerging technologies. Currently learning
-                HTML, CSS, JavaScript, and Python to build innovative solutions.
+              i am a medgaedvers student majoring in buisness
             
                 🎯 **Current Focus:** Building interactive web applications with Streamlit
             
                 📚 **Currently Learning:** Internet and Emergin Technologies (CIS 211)
             
-                🌱 **Fun Fact:** I can solve a Rubik's cube in under 2 minutes!
+                🌱 **Fun Fact:** cat dog tem
             ''')
   with col2:
     # Placeholder for image
