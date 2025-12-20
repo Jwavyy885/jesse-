@@ -7,7 +7,7 @@ st.set_page_config(
   page_title =' jesse | Portfolio',
   page_icon='🎯',
   layout = 'wide'
-)
+
 
 # Custom CSS (optional - for styling)
 st.markdown('''
@@ -55,7 +55,33 @@ if page == '🏠 Home':
   with col2:
     # Placeholder for image
     st.image('https://www.georgesmusic.com/NEW-MAIN-p-38.jpg', use_column_width=True)
+elif page == '🤠 About':
+  st.title('About Me')
+
+  # Timeline of my Professional Journey
+  st.subheader('My Journey in buisnnes  )
+
+  with st.expander('2025 - Present: Medgar Evers College'):
+    st.write('''
+                - Major: busisness 
+                - Relevant Coursework: im taking accounting classes , and other buissness classes 
+                - Activities: baskettball, 
+            ''')
+
+  st.subheader('Interests & Hobbies 🏀')
+  interests =  music , ' accounting ', ' 'Basketball', 'Travel', 'Baseball']
+
+  # Display the interests in columns
+  cols = st.columns(3)
+  for i, interest in enumerate(interests):
+    with cols[i % 3]:
+      st.info(f'🔷 {interest}')
+      
+elif page == '💼 Projects':
+  st.title('My Projects')
+  st.write( Im still working on a few but they arent really projects)
   
+
 
 
 
