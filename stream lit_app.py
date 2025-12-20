@@ -80,7 +80,111 @@ elif page == '🤠 About':
 elif page == '💼 Projects':
   st.title('My Projects')
   st.write( Im still working on a few but they arent really projects)
+   with st.container():
+    col1, col2 = st.columns([1, 2])
   
+    with col1:
+        st.image('https://iprx-cms-content.ams1.vultrobjects.com/Blog_How_To_Crawl_4_capcha_ded9206d5f.png', use_column_width = True)
+
+    with col2:
+        st.subheader('🛒 E-Commerce Price Tracker')
+        st.write('Python web scraper that monitors Amazon prices and sends alerts')
+        st.caption('**Technologies:** Python, BeautifulSoup, Streamlit')
+
+
+  
+elif page == '🛠 Skills':
+  st.title(' music and math  )
+
+  # Skills with progress bars
+  st.subheader( making beats , and math ')
+
+  skills_data = {
+    'music  : 90,
+    ' accounting' : 80,
+    ' chuch events ' : 90
+  }
+
+  for skill, level in skills_data.items():
+    col1, col2 = st.columns([1,3])
+    with col1:
+      st.write(skill)
+    with col2:
+      st.progress(level/100)
+
+  st.subheader('Tools & Technologies')
+
+  col1, col2, col3 = st.columns(3)
+  with col1:
+    st.success('Excel')
+    st.info('Word')
+    st.warning('Access')
+
+  with col2:
+    st.success(' church')
+    st.info(' internships\s')
+    st.warning('ChatGPT/AI Tools')
+    
+  with col3:
+    st.success('Presentations')
+    st.info('events ')
+    st.warning('Social Media')
+
+elif page == '📝 Resume':
+  st.title('Resume')
+
+  # Read PDF from my GitHub repository
+  with open('my_resume.pdf', 'rb') as pdf_file:
+    PDFbyte = pdf_file.read()
+  
+  st.download_button(
+    label ='🔻 Download Full Resume (PDF)',
+    data = PDFbyte,
+    file_name = 'my_resume.pdf',
+    mime ='application/pdf'
+  )
+
+elif page == '📩 Contact':
+  st.title("Let's Connect!")
+
+  col1, = st.columns(1)
+
+  with col1:
+    st.subheader('Send me a message.')
+
+    st.write('''
+        📧 **Email:**jesse.amoateng@com
+
+        🏢 **LinkedIn:** [linkedin.com/in/Jesse Amoateng](https://linkedin.com)
+
+        👩‍💻 **Github:** [https://Jwavyy885.(https://github.com)
+
+        📷 **Instagram:** [@jesseamoateng](https://instagram.com)
+
+    ''')
+
+    # Fun interative element
+    st.subheader('Current Status')
+
+    status = st.selectbox(
+        "I'm currently:",
+        [
+            '👩‍💻 busisnnes ',
+            '📕 Studying',
+            '☕ producing music ',
+            '🎮 Gaming',
+            '😴 at church '
+        ]
+    )
+
+
+    st.info(f'Status: {status}')
+
+    # Footer
+    st.write('---')
+    st.markdown(
+        f'<center>Made with 💗 using Streamlit | © {datetime.now().year}  jesse Amoateng </center>',
+        unsafe_allow_html = True
 
 
 
